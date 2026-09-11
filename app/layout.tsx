@@ -5,9 +5,6 @@ import "./olya-brand.css";
 import "./murketolog-widget.css";
 import "./live-crm.css";
 import "./client-booking-history.css";
-import MurketologWidget from "./murketolog-widget";
-import TimeGreeting from "./time-greeting";
-import ClientBookingHistory from "./client-booking-history";
 
 export const metadata: Metadata = {
   title: "Oyaka Workspace — CRM фотографа Олі",
@@ -17,12 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="uk">
-      <body>
-        {children}
-        <TimeGreeting />
-        <ClientBookingHistory />
-        <MurketologWidget />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
