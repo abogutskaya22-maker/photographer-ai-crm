@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./olya-theme.css";
 
 export const metadata: Metadata = {
-  title: "FrameFlow — Photographer CRM",
-  description: "CRM та AI-помічник для фотографа",
+  title: "Oyaka Workspace — CRM фотографа Олі",
+  description: "Робоче середовище фотографа Олі: клієнти, зйомки, контент, фінанси та AI-помічник",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
