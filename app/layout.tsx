@@ -6,7 +6,7 @@ import PhotographerName from "./photographer-name";
 
 export const metadata: Metadata = {
   title: "Oyaka Workspace — CRM фотографа Олі",
-  description: "Робоче середовище фотографа Олі: клієнти, зйомки, контент, фінанси та AI-помічник",
+  description: "Робоче середовище фотографа Олі: клієнти, зйомки, контент, фінанси та Муркетолог 🐾",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
