@@ -1,1 +1,1 @@
-export { default } from "./crm-app";
+export { default } from "./crm-v2";
