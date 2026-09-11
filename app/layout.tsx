@@ -4,8 +4,10 @@ import "./olya-theme.css";
 import "./olya-brand.css";
 import "./murketolog-widget.css";
 import "./live-crm.css";
+import "./client-booking-history.css";
 import MurketologWidget from "./murketolog-widget";
 import TimeGreeting from "./time-greeting";
+import ClientBookingHistory from "./client-booking-history";
 
 export const metadata: Metadata = {
   title: "Oyaka Workspace — CRM фотографа Олі",
@@ -18,6 +20,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         {children}
         <TimeGreeting />
+        <ClientBookingHistory />
         <MurketologWidget />
       </body>
     </html>
