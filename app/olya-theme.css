@@ -1,0 +1,124 @@
+:root {
+  --bg: #f3eee6;
+  --panel: #fffdf9;
+  --text: #2e2925;
+  --muted: #7b7067;
+  --line: #e4d8ca;
+  --accent: #8a6446;
+  --accent-soft: #eee0d2;
+  --green: #687257;
+  --green-soft: #e7eadf;
+  --orange: #aa7245;
+  --orange-soft: #f5e3cf;
+  --pink: #8a5f5b;
+  --pink-soft: #efe0dc;
+  --shadow: 0 18px 45px rgba(70, 53, 37, .08);
+}
+
+body {
+  background:
+    radial-gradient(circle at 82% 3%, rgba(182, 150, 116, .11), transparent 27%),
+    linear-gradient(180deg, #f5f0e9 0%, #f1ece4 100%);
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #2f2924 0%, #211d1a 100%);
+  color: #fffaf4;
+}
+
+.brand-mark {
+  background: linear-gradient(135deg, #b78a64, #7d5a40);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.14);
+}
+.brand span { color: #ad9f93; }
+.nav-item { color: #baa99b; }
+.nav-item:hover { background: #3a322c; color: #fffaf4; }
+.nav-item.active { background: #463a31; color: #fffaf4; }
+.nav-item em { background: #a87955; }
+.storage-card { background: #322b26; border-color: #4b4037; color: #eee4da; }
+.storage-card span { color: #9e8e82; }
+.profile-avatar { background: #d7b89b; color: #4d3423; }
+.profile strong { font-size: 0; }
+.profile strong::after { content: "Оля"; font-size: 12px; }
+.profile-avatar { font-size: 0; }
+.profile-avatar::after { content: "О"; font-size: 12px; }
+.profile span { color: #9f9186; }
+
+.topbar {
+  background: rgba(243, 238, 230, .88);
+  border-bottom-color: rgba(219, 205, 190, .8);
+}
+.top-title { color: #71665d; }
+.icon-button, .secondary, .search {
+  background: #fffaf4;
+  border-color: var(--line);
+}
+.quick-add, .primary { background: #382f29; color: #fffaf4; }
+.ai-button { background: #8a6446; }
+
+.page-heading h1 { color: #302924; }
+.page-heading:has(+ .stats-grid) h1 { font-size: 0; }
+.page-heading:has(+ .stats-grid) h1::after { content: "Доброго ранку, Олю 👋"; font-size: clamp(28px, 3vw, 38px); }
+.eyebrow { color: #9a7a61; }
+.muted { color: #83766d; }
+
+.panel, .stat-card, .search {
+  background: rgba(255, 253, 249, .94);
+  border-color: #e6dacd;
+  box-shadow: var(--shadow);
+}
+.stat-icon, .mini-icon, .soft-pill { background: #efe7dd; color: #6c5848; }
+.accent-item { background: #f7efe6; border-color: #e6d4c1 !important; }
+.time, .text-action { color: #8a6446; }
+.task-check { border-color: #decfc0; color: #7f6d5d; }
+
+.ai-card {
+  background:
+    linear-gradient(145deg, rgba(68, 57, 48, .98), rgba(43, 37, 32, .99));
+  border-color: #57483d;
+}
+.ai-head .eyebrow { color: #d0ab8a; }
+.ai-orb { background: linear-gradient(135deg, #b8865e, #7d5a40); }
+.ai-copy { color: #c7b8ab; }
+.ai-suggestions > div { color: #c5b6aa; border-color: rgba(255,255,255,.09); background: rgba(255,255,255,.04); }
+.ai-card .ai-button { background: #a67551; }
+
+.avatar { background: #e8ddd1; color: #6a5544; }
+.status.new { background: #ece7df; color: #76685e; }
+.status.waiting { background: #f4e1cd; color: #955f36; }
+.status.booked { background: #e3e8dc; color: #5f6b4f; }
+.status.work { background: #eadfd5; color: #76563f; }
+.status.done { background: #ece8e2; color: #746d67; }
+
+.progress { background: #e8ded3; }
+.progress div { background: linear-gradient(90deg, #7d5a40, #b98b64); }
+.hint { background: #f2e9df; color: #725d4b; }
+
+.calendar-day.today > strong { color: #7d5a40; background: #eee0d2; }
+.event.shoot { background: #e6ddd0; color: #5e4a3b; }
+.event.deadline { background: #efe0dc; color: #7f5550; }
+.event.content { background: #e5e8dc; color: #5f684f; }
+
+.content-ai-hero {
+  background: linear-gradient(135deg, #fbf5ee 0%, #efe2d4 100%);
+  border-color: #dfccb9;
+}
+.ai-badge { background: #e9d8c8; color: #76563f; }
+.content-score { background: rgba(255,255,255,.55); border-color: #decbbb; }
+.content-column { background: #eee6dc; }
+.content-card { background: #fffaf4; border-color: #dfd2c5; }
+.content-thumb { background: linear-gradient(135deg, #d9c2aa, #8f6a4c); color: #fffaf4; }
+.format { color: #8a6446; }
+
+.shoot-cover.cover-1 { background: linear-gradient(135deg, #cfb395, #785c45); }
+.shoot-cover.cover-2 { background: linear-gradient(135deg, #888075, #393531); }
+.shoot-cover.cover-3 { background: linear-gradient(135deg, #9a936a, #5a5941); }
+.shoot-cover.cover-4 { background: linear-gradient(135deg, #bd9b7b, #674d38); }
+
+.bar-track { background: #e9dfd5; }
+.bar-track div { background: #8a6446; }
+.insight-panel { background: #f8f0e7; border-color: #e1cfbd; }
+
+@media (max-width: 800px) {
+  .page-heading:has(+ .stats-grid) h1::after { font-size: 29px; }
+}
