@@ -1,0 +1,4 @@
+.brand strong { font-size: 0; }
+.brand strong::after { content: "Oyaka Workspace"; font-size: 17px; letter-spacing: -.2px; }
+.brand span { font-size: 0; }
+.brand span::after { content: "photo_oyaka · робоче середовище"; font-size: 10px; }
