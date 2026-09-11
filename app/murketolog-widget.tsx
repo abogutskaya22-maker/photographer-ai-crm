@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronRight, MessageCircle, PawPrint, Sparkles, Target, WandSparkles, X } from "lucide-react";
+import { supabase } from "./supabase";
 
 type Mode = "today" | "money" | "content" | "leads";
 
@@ -33,15 +34,32 @@ const modeContent: Record<Mode, { title: string; text: string; action: string; n
 };
 
 export default function MurketologWidget() {
+  const [authenticated, setAuthenticated] = useState(false);
+  const [authReady, setAuthReady] = useState(false);
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState<Mode>("today");
   const [toast, setToast] = useState<string | null>(null);
   const active = useMemo(() => modeContent[mode], [mode]);
 
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setAuthenticated(Boolean(data.session));
+      setAuthReady(true);
+    });
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      setAuthenticated(Boolean(session));
+      setAuthReady(true);
+      if (!session) setOpen(false);
+    });
+    return () => data.subscription.unsubscribe();
+  }, []);
+
   const act = () => {
     setToast("Готово. Я підготував чернетку — далі потрібне підтвердження Олі 🐾");
     window.setTimeout(() => setToast(null), 3200);
   };
+
+  if (!authReady || !authenticated) return null;
 
   return (
     <>
