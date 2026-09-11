@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function PhotographerName() {
   useEffect(() => {
-    const replaceName = () => {
+    const replaceWorkspaceText = () => {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       const nodes: Text[] = [];
       let node = walker.nextNode();
@@ -17,7 +17,12 @@ export default function PhotographerName() {
         if (!textNode.nodeValue) return;
         textNode.nodeValue = textNode.nodeValue
           .replaceAll("Настю", "Олю")
-          .replaceAll("Настя", "Оля");
+          .replaceAll("Настя", "Оля")
+          .replaceAll("AI-помічник", "Муркетолог 🐾")
+          .replaceAll("AI Content Manager", "Муркетолог 🐾")
+          .replaceAll("AI-висновок", "Муркетолог радить")
+          .replaceAll("AI радить", "Муркетолог радить")
+          .replaceAll("AI може", "Муркетолог може");
       });
 
       document.querySelectorAll(".profile-avatar").forEach((avatar) => {
@@ -25,8 +30,8 @@ export default function PhotographerName() {
       });
     };
 
-    replaceName();
-    const observer = new MutationObserver(replaceName);
+    replaceWorkspaceText();
+    const observer = new MutationObserver(replaceWorkspaceText);
     observer.observe(document.body, { childList: true, subtree: true });
     return () => observer.disconnect();
   }, []);
