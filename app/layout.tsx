@@ -5,6 +5,7 @@ import "./olya-brand.css";
 import "./murketolog-widget.css";
 import "./live-crm.css";
 import MurketologWidget from "./murketolog-widget";
+import TimeGreeting from "./time-greeting";
 
 export const metadata: Metadata = {
   title: "Oyaka Workspace — CRM фотографа Олі",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="uk">
       <body>
         {children}
+        <TimeGreeting />
         <MurketologWidget />
       </body>
     </html>
