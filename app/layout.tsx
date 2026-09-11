@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./olya-theme.css";
+import "./olya-brand.css";
 
 export const metadata: Metadata = {
   title: "Oyaka Workspace — CRM фотографа Олі",
