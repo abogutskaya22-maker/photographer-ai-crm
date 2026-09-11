@@ -3,7 +3,7 @@ import "./globals.css";
 import "./olya-theme.css";
 import "./olya-brand.css";
 import "./murketolog-widget.css";
-import PhotographerName from "./photographer-name";
+import "./live-crm.css";
 import MurketologWidget from "./murketolog-widget";
 
 export const metadata: Metadata = {
@@ -16,7 +16,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="uk">
       <body>
         {children}
-        <PhotographerName />
         <MurketologWidget />
       </body>
     </html>
